@@ -9,7 +9,6 @@ namespace WorldCup.Domain.Entities
 
         public ICollection<CupTitle> CupTitles { get; set; }
 
-
         public FootballClub(string country, string image)
         {
             ValidateDomain(country, image);

@@ -8,9 +8,9 @@ namespace WorldCup.Domain.Entities
 
         public string Location { get; private set; }
 
-        public int FootballClubId { get; set; } //Foreign Key
+        public int? ChampionFootballClubId { get; set; } //Foreign Key
 
-        public FootballClub FootballClub { get; set; }
+        public FootballClub ChampionFootballClub { get; set; }
 
         private void ValidateDomain(int cupYear, string location)
         {
@@ -24,11 +24,11 @@ namespace WorldCup.Domain.Entities
 
         }
 
-        public void Update(int cupYear, string location, int footballClubId)
+        public void Update(int cupYear, string location, int championFootballClubId)
         {
             ValidateDomain(cupYear, location);
 
-            FootballClubId = footballClubId;
+            ChampionFootballClubId = championFootballClubId;
 
         }
 

@@ -22,8 +22,4 @@
     <ProjectReference Include="..\WorldCup.Domain\WorldCup.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="EntitiesConfiguration\" />
-  </ItemGroup>
-
 </Project>
