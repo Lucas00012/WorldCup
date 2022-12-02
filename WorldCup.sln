@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldCup.Domain", "WorldCup.Domain\WorldCup.Domain.csproj", "{7A3C1D26-6E24-418B-9569-5E58A85F9826}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCup.Domain", "WorldCup.Domain\WorldCup.Domain.csproj", "{7A3C1D26-6E24-418B-9569-5E58A85F9826}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldCup.Application", "WorldCup.Application\WorldCup.Application.csproj", "{628E3291-0667-408D-B760-B74B7BE81E44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCup.Application", "WorldCup.Application\WorldCup.Application.csproj", "{628E3291-0667-408D-B760-B74B7BE81E44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldCup.Infra.Data", "WorldCup.Infra.Data\WorldCup.Infra.Data.csproj", "{D18D46CA-BA98-426F-9B41-E5240522A7E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCup.Infra.Data", "WorldCup.Infra.Data\WorldCup.Infra.Data.csproj", "{D18D46CA-BA98-426F-9B41-E5240522A7E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldCup.Infra.Ioc", "WorldCup.Infra.Ioc\WorldCup.Infra.Ioc.csproj", "{3F621002-FBEB-4836-828B-2F751B142154}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCup.Infra.Ioc", "WorldCup.Infra.Ioc\WorldCup.Infra.Ioc.csproj", "{3F621002-FBEB-4836-828B-2F751B142154}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldCup.WebUI", "WorldCup.WebUI\WorldCup.WebUI.csproj", "{0CF841F5-372B-47EC-9F14-F8CDC811CEF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCup.WebUI", "WorldCup.WebUI\WorldCup.WebUI.csproj", "{0CF841F5-372B-47EC-9F14-F8CDC811CEF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldCup.Domain.Test", "WorldCup.Domain.Test\WorldCup.Domain.Test.csproj", "{045F9E17-0A8B-48E7-B913-0DFF598F6C13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{0CF841F5-372B-47EC-9F14-F8CDC811CEF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CF841F5-372B-47EC-9F14-F8CDC811CEF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CF841F5-372B-47EC-9F14-F8CDC811CEF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{045F9E17-0A8B-48E7-B913-0DFF598F6C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{045F9E17-0A8B-48E7-B913-0DFF598F6C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{045F9E17-0A8B-48E7-B913-0DFF598F6C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{045F9E17-0A8B-48E7-B913-0DFF598F6C13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

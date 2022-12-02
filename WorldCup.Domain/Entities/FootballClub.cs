@@ -15,7 +15,7 @@ namespace WorldCup.Domain.Entities
             ValidateDomain(country, image);
         }
 
-        public FootballClub(int id, string country, string image)
+        public FootballClub(int id, string country, string? image)
         {
             DomainExceptionValidation.When(id < 0, "Invalid ID");
             Id = id;
@@ -27,7 +27,7 @@ namespace WorldCup.Domain.Entities
             DomainExceptionValidation.When(string.IsNullOrEmpty(country), "Invalid country! Country is required");
             DomainExceptionValidation.When(country.Length < 3, "Invalid country, too short, minimum 3 characters");
 
-            DomainExceptionValidation.When(image.Length > 300, "Path of image too long");
+            DomainExceptionValidation.When(image?.Length > 300, "Path of image too long");
 
             Country = country;
             Image = image;
