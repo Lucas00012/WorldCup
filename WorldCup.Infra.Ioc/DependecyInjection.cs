@@ -14,7 +14,7 @@ namespace WorldCup.Infra.Ioc
             IConfiguration configuration)
         {
             services.AddDbContext<ApplicationDbContext>(options => 
-            options.UseSqlServer(configuration.GetConnectionString("WorldCupConnection"), b => b
+            options.UseSqlServer(configuration.GetConnectionString("WorldCupDbConnection"), b => b
                 .MigrationsAssembly(typeof(ApplicationDbContext)
                 .Assembly.FullName)));
 
