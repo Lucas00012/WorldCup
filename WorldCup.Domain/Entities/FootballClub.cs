@@ -2,7 +2,7 @@
 
 namespace WorldCup.Domain.Entities
 {
-    public sealed class FootballClub :Entity
+    public sealed class FootballClub : Entity
     {
         public string Country { get; private set; }
         public string Image { get; private set; }
