@@ -2,10 +2,8 @@
 
 namespace WorldCup.Domain.Entities
 {
-    public sealed class CupTitle
+    public sealed class CupTitle : Entity
     {
-        public int Id { get; private set; }
-
         public int CupYear { get; private set; }
 
         public string Location { get; private set; }

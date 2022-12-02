@@ -2,10 +2,8 @@
 
 namespace WorldCup.Domain.Entities
 {
-    public sealed class FootballClub
+    public sealed class FootballClub :Entity
     {
-        public int Id { get; private set; }
-
         public string Country { get; private set; }
         public string Image { get; private set; }
 
