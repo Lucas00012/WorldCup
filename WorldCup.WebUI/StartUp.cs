@@ -1,5 +1,4 @@
 ﻿using WorldCup.Infra.Ioc;
-using WorldCup.Infra.IoC;
 
 
 namespace WorldCup.WebUI

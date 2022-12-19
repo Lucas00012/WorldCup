@@ -18,9 +18,9 @@ namespace WorldCup.Infra.Data.EntitiesConfiguration
                 .HasForeignKey(fk => fk.ChampionFootballClubId);
 
             builder.HasData(
-                new CupTitle(1930, "Uruguay"),
-                new CupTitle(2014, "Brazil"),
-                new CupTitle(2022, "Qatar")
+                new CupTitle(1, 1930, "Uruguay"),
+                new CupTitle(2, 2014, "Brazil"),
+                new CupTitle(3, 2022, "Qatar")
                 );
 
         }
