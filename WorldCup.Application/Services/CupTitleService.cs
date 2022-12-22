@@ -33,6 +33,13 @@ namespace WorldCup.Application.Services
             return _mapper.Map<IEnumerable<CupTitleDTO>>(cupTitleEntities);
         }
 
+        public async Task<IEnumerable<CupTitleDTO>> getCupTitleChampionClub(int? id)
+        {
+            var cupTitleEntities = await _cupTitleRepository.GetCupTitleFootballClubAsync(id);
+
+            return _mapper.Map<IEnumerable<CupTitleDTO>>(cupTitleEntities);
+        }
+
 
         public async Task Add(CupTitleDTO cupTitleDto)
         {
@@ -56,6 +63,6 @@ namespace WorldCup.Application.Services
 
         }
 
-
+ 
     }
 }

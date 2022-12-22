@@ -8,6 +8,8 @@ namespace WorldCup.Application.Interfaces
         Task<IEnumerable<CupTitleDTO>> GetCupTitles();
         Task<CupTitleDTO> GetById(int? id);
 
+        Task<IEnumerable<CupTitleDTO>> getCupTitleChampionClub(int? id);
+
         Task Add(CupTitleDTO cupTitleDto);
 
         Task Update(CupTitleDTO cupTitleDto);
