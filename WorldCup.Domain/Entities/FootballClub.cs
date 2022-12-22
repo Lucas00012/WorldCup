@@ -5,9 +5,9 @@ namespace WorldCup.Domain.Entities
     public sealed class FootballClub : Entity
     {
         public string Country { get; private set; }
-        public string Image { get; private set; }
+        public string? Image { get; private set; }
 
-        public ICollection<CupTitle> CupTitles { get; set; }
+        public ICollection<CupTitle> CupTitles { get; set; } //Navegation Prop
 
         public FootballClub(string country, string image)
         {

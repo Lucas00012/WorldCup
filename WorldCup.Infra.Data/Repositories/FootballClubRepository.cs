@@ -21,7 +21,6 @@ namespace WorldCup.Infra.Data.Repositories
 
             return footballClub;
         }
-
         public async Task<IEnumerable<FootballClub>> GetFootballClubAsync()
         {
             return await _footbalClubContext.FootballClubs.ToListAsync();

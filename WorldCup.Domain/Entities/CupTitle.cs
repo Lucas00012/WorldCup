@@ -10,7 +10,7 @@ namespace WorldCup.Domain.Entities
 
         public int? ChampionFootballClubId { get; set; } //Foreign Key
 
-        public FootballClub? ChampionFootballClub { get; set; }
+        public FootballClub? ChampionFootballClub { get; set; } 
 
         private void ValidateDomain(int cupYear, string location)
         {
