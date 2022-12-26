@@ -1,23 +1,28 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using WorldCup.Application.DTOs;
 using WorldCup.Application.Interfaces;
-using WorldCup.Application.Services;
 
 namespace WorldCup.WebUI.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
+    [Consumes("application/json")]
+    [Produces("application/json")]
     public class FootballClubController : Controller
     {
-        private readonly ILogger<CupsTitlesController> _logger;
+        private readonly ILogger<FootballClubController> _logger;
         private readonly IFootballClubService _footballClubService;
 
-        public FootballClubController(ILogger<CupsTitlesController> logger, IFootballClubService footballClubService)
+        public FootballClubController(ILogger<FootballClubController> logger, IFootballClubService footballClubService)
         {
             _logger = logger;
             _footballClubService = footballClubService;
         }
 
         [HttpGet]
-        public async Task<ActionResult> GetAll()
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<IEnumerable<FootballClubDTO>>> GetAll()
         {
             var result = await _footballClubService.GetFootballClubAsync();
 
@@ -27,6 +32,24 @@ namespace WorldCup.WebUI.Controllers
             }
 
             return Ok(result);
+        }
+
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        public async Task<ActionResult<FootballClubDTO>> AddFootballClub(FootballClubDTO footballClubDTO)
+        {
+
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            await _footballClubService.Add(footballClubDTO);
+
+            return CreatedAtAction(nameof(AddFootballClub), footballClubDTO);
+
         }
 
     }

@@ -17,7 +17,6 @@ namespace WorldCup.Application.DTOs
 
         [Required(ErrorMessage = "The location is required")]
         [StringLength(100, MinimumLength = 3)]
-
         [DisplayName("Location")]
         public string? Location { get;  set; }
 

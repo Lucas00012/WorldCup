@@ -1,10 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WorldCup.Application.DTOs;
 using WorldCup.Application.Interfaces;
 
 namespace WorldCup.WebUI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Consumes("application/json")]
+    [Produces("application/json")]
     public class CupsTitlesController : ControllerBase
     {
         private readonly ILogger<CupsTitlesController> _logger;
@@ -16,11 +19,13 @@ namespace WorldCup.WebUI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> GetAll()
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<IEnumerable<CupTitleDTO>>> GetAll()
         {
             var result = await _cupTitleService.GetCupTitles();
-            
-            if(result == null)
+
+            if (result == null)
             {
                 return NotFound();
             }
@@ -29,9 +34,19 @@ namespace WorldCup.WebUI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create()
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        public async Task<ActionResult<CupTitleDTO>> AddCupTitle(CupTitleDTO cupTitleDTO)
         {
-            return CreatedAtAction(nameof(Create),"");
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            await _cupTitleService.Add(cupTitleDTO);
+
+            return CreatedAtAction(nameof(AddCupTitle), cupTitleDTO);
+
         }
 
         [HttpPut]
