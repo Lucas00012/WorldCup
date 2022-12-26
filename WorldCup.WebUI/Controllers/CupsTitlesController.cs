@@ -1,22 +1,31 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WorldCup.Application.Interfaces;
 
 namespace WorldCup.WebUI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CupTitleController : ControllerBase
+    public class CupsTitlesController : ControllerBase
     {
-        private readonly ILogger<CupTitleController> _logger;
-
-        public CupTitleController(ILogger<CupTitleController> logger)
+        private readonly ILogger<CupsTitlesController> _logger;
+        private readonly ICupTitleService _cupTitleService;
+        public CupsTitlesController(ILogger<CupsTitlesController> logger, ICupTitleService cupTitleService)
         {
             _logger = logger;
+            _cupTitleService = cupTitleService;
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public async Task<ActionResult> GetAll()
         {
-            return (Ok()); 
+            var result = await _cupTitleService.GetCupTitles();
+            
+            if(result == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(result);
         }
 
         [HttpPost]
