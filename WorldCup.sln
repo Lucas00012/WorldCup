@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCup.Infra.Data", "Worl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCup.Infra.Ioc", "WorldCup.Infra.Ioc\WorldCup.Infra.Ioc.csproj", "{3F621002-FBEB-4836-828B-2F751B142154}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCup.WebUI", "WorldCup.WebUI\WorldCup.WebUI.csproj", "{0CF841F5-372B-47EC-9F14-F8CDC811CEF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCup.Domain.Test", "WorldCup.Domain.Test\WorldCup.Domain.Test.csproj", "{045F9E17-0A8B-48E7-B913-0DFF598F6C13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldCup.Domain.Test", "WorldCup.Domain.Test\WorldCup.Domain.Test.csproj", "{045F9E17-0A8B-48E7-B913-0DFF598F6C13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCup.WebOld", "WorldCup.WebOld\WorldCup.WebOld.csproj", "{B92310AA-7C9A-444E-9D64-5365128C17B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldCup.WebUI", "WorldCup.WebUI\WorldCup.WebUI.csproj", "{1EFE8329-AE3A-498D-BC0C-E906A9C7716D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,14 +39,18 @@ Global
 		{3F621002-FBEB-4836-828B-2F751B142154}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F621002-FBEB-4836-828B-2F751B142154}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F621002-FBEB-4836-828B-2F751B142154}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0CF841F5-372B-47EC-9F14-F8CDC811CEF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0CF841F5-372B-47EC-9F14-F8CDC811CEF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0CF841F5-372B-47EC-9F14-F8CDC811CEF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0CF841F5-372B-47EC-9F14-F8CDC811CEF3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{045F9E17-0A8B-48E7-B913-0DFF598F6C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{045F9E17-0A8B-48E7-B913-0DFF598F6C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{045F9E17-0A8B-48E7-B913-0DFF598F6C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{045F9E17-0A8B-48E7-B913-0DFF598F6C13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B92310AA-7C9A-444E-9D64-5365128C17B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B92310AA-7C9A-444E-9D64-5365128C17B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B92310AA-7C9A-444E-9D64-5365128C17B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B92310AA-7C9A-444E-9D64-5365128C17B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EFE8329-AE3A-498D-BC0C-E906A9C7716D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EFE8329-AE3A-498D-BC0C-E906A9C7716D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EFE8329-AE3A-498D-BC0C-E906A9C7716D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EFE8329-AE3A-498D-BC0C-E906A9C7716D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,9 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WorldCup.Domain.Entities;
 using WorldCup.Domain.Interfaces;
 using WorldCup.Infra.Data.Context;
@@ -16,16 +11,16 @@ namespace WorldCup.Infra.Data.Repositories
 
         public CupTitleRepository(ApplicationDbContext context)
         {
-            _cupTitleContext= context; //realize operation in DB
+            _cupTitleContext = context; //realize operation in DB
         }
 
         public async Task<CupTitle> CreateAsync(CupTitle cupTitle)
         {
-           _cupTitleContext.Add(cupTitle);
+            _cupTitleContext.Add(cupTitle);
 
-           await _cupTitleContext.SaveChangesAsync();
-           
-           return cupTitle;
+            await _cupTitleContext.SaveChangesAsync();
+
+            return cupTitle;
 
         }
 
