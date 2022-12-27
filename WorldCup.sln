@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCup.Domain.Test", "Wor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCup.WebOld", "WorldCup.WebOld\WorldCup.WebOld.csproj", "{B92310AA-7C9A-444E-9D64-5365128C17B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldCup.WebUI", "WorldCup.WebUI\WorldCup.WebUI.csproj", "{1EFE8329-AE3A-498D-BC0C-E906A9C7716D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCup.WebUI", "WorldCup.WebUI\WorldCup.WebUI.csproj", "{1EFE8329-AE3A-498D-BC0C-E906A9C7716D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

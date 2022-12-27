@@ -4,6 +4,7 @@ using WorldCup.Application.Interfaces;
 
 namespace WorldCup.WebUI.Controllers
 {
+    [ApiVersion("1.0")]
     [ApiController]
     [Route("[controller]")]
     [Consumes("application/json")]
@@ -45,20 +46,20 @@ namespace WorldCup.WebUI.Controllers
         }
 
         [HttpPut]
-        public IActionResult Update()
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public async Task<IActionResult> UpdatePutCupTitle(CupTitleDTO cupTitleDTO)
         {
-            return NoContent();
-        }
-
-        [HttpPatch]
-        public IActionResult Updat()
-        {
+            await _cupTitleService.Update(cupTitleDTO);
             return NoContent();
         }
 
         [HttpDelete]
-        public IActionResult Delete()
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> Delete(int id)
         {
+            await _cupTitleService.Remove(id);
             return Ok();
         }
     }
