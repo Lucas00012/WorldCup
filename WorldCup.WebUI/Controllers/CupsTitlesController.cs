@@ -21,7 +21,7 @@ namespace WorldCup.WebUI.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<IEnumerable<CupTitleDTO>>> GetAll()
+        public async Task<ActionResult<IEnumerable<CupTitleDTO>>> Get()
         {
             var result = await _cupTitleService.GetCupTitles();
 
@@ -38,11 +38,6 @@ namespace WorldCup.WebUI.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<ActionResult<CupTitleDTO>> AddCupTitle(CupTitleDTO cupTitleDTO)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
-
             await _cupTitleService.Add(cupTitleDTO);
 
             return CreatedAtAction(nameof(AddCupTitle), cupTitleDTO);

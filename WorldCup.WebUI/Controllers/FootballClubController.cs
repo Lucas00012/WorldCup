@@ -39,13 +39,6 @@ namespace WorldCup.WebUI.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<ActionResult<FootballClubDTO>> AddFootballClub(FootballClubDTO footballClubDTO)
         {
-
-
-            if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
-
             await _footballClubService.Add(footballClubDTO);
 
             return CreatedAtAction(nameof(AddFootballClub), footballClubDTO);

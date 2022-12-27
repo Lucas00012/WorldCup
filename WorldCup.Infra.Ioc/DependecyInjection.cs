@@ -27,6 +27,7 @@ namespace WorldCup.Infra.Ioc
             services.AddScoped<IFootballClubService, FootballClubService>();
             services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 
+
             return services;
 
         }
