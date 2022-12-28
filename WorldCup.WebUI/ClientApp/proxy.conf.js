@@ -9,7 +9,10 @@ const PROXY_CONFIG = [
       "/swagger",
       "/documentation",
       "/weatherforecast",
-   ],
+      "/CupsTitles",
+      "/FootballClubs",
+    ],
+    changeOrigin: true,
     target: target,
     secure: false,
     headers: {

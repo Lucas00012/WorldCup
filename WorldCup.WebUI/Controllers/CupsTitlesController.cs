@@ -7,13 +7,14 @@ namespace WorldCup.WebUI.Controllers
     [ApiVersion("1.0")]
     [ApiController]
     [Route("[controller]")]
-/*    [Consumes("application/json")]
-    [Produces("application/json")]*/
+    [Consumes("application/json")]
+    [Produces("application/json")]
     public class CupsTitlesController : ControllerBase
     {
         private readonly ILogger<CupsTitlesController> _logger;
         private readonly ICupTitleService _cupTitleService;
-        public CupsTitlesController(ILogger<CupsTitlesController> logger, ICupTitleService cupTitleService)
+        public CupsTitlesController(ILogger<CupsTitlesController> logger, 
+            ICupTitleService cupTitleService)
         {
             _logger = logger;
             _cupTitleService = cupTitleService;
@@ -28,7 +29,9 @@ namespace WorldCup.WebUI.Controllers
 
             if (result == null)
             {
-                return NotFound();
+                Console.WriteLine(result);
+                return NoContent();
+                
             }
 
             return Ok(result);

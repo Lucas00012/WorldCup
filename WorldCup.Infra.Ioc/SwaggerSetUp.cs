@@ -7,13 +7,13 @@ namespace WorldCup.Infra.Ioc
     public static class SwaggerSetUp
     {
         public static IServiceCollection AddSwaggerConfiguration(this IServiceCollection services)
-        {
+        {    
 
             return services.AddSwaggerGen(opt =>
             {
                 opt.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "Template .Net Core",
+                    Title = "Apis World Cup",
                     Version = "v1",
                     Description = "API project World Cup",
                     Contact = new OpenApiContact
