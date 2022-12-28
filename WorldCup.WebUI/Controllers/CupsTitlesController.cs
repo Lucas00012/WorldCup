@@ -7,8 +7,8 @@ namespace WorldCup.WebUI.Controllers
     [ApiVersion("1.0")]
     [ApiController]
     [Route("[controller]")]
-    [Consumes("application/json")]
-    [Produces("application/json")]
+/*    [Consumes("application/json")]
+    [Produces("application/json")]*/
     public class CupsTitlesController : ControllerBase
     {
         private readonly ILogger<CupsTitlesController> _logger;

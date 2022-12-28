@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WorldCup.Domain\WorldCup.Domain.csproj" />
+    <ProjectReference Include="..\WorldCup.Infra.Data\WorldCup.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>

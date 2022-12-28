@@ -39,6 +39,7 @@ namespace WorldCup.Infra.Data.Repositories
         public async Task<IEnumerable<CupTitle>> GetCupTitlesAsync()
         {
             return await _cupTitleContext.CupTitles.ToListAsync();
+
         }
 
         public async Task<CupTitle> RemoveAsync(CupTitle cupTitle)

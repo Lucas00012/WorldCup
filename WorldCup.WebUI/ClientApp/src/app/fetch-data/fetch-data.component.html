@@ -2,9 +2,9 @@
 
 <p>This component demonstrates fetching data from the server.</p>
 
-<p *ngIf="!cupsTitles"><em>Loading...</em></p>
+<p><em>Loading...</em></p>
 
-<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="cupsTitles">
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="dataSource">
   <thead>
     <tr>
       <th>Cup Year</th>
@@ -12,9 +12,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let cupTitle of cupsTitles">
-      <td>{{ cupTitle.CupYear }}</td>
-      <td>{{ cupTitle.Location }}</td>
+    <tr *ngFor="let cupTitle of dataSource">
+      <td>{{ cupTitle.cupYear }}</td>
+      <td>{{ cupTitle.location }}</td>
     </tr>
   </tbody>
 </table>

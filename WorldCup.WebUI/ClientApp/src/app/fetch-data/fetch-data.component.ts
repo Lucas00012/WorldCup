@@ -1,22 +1,30 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { CupTitle } from '../../model/cupTitle';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-fetch-data',
   templateUrl: './fetch-data.component.html'
 })
-export class FetchDataComponent {
-  public cupsTitles: ICupTitleDto[] = [];
+export class FetchDataComponent implements OnInit{
+  displayedColumns: string[] = ['cup year', 'location'];
+  dataSource?: CupTitle[];
+  isLoadingResults = true;
 
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<ICupTitleDto[]>(baseUrl + 'cupstitles').subscribe(result => {
-      this.cupsTitles = result;
-    }, error => console.error(error));
+  constructor(private api: ApiService) {
+
   }
-}
+    ngOnInit(): void {
+      this.api.getCupTitles().subscribe(result => {
+        this.dataSource = result;
+        console.log(this.dataSource);
+        this.isLoadingResults = false;
+      }, error => {
+        console.log(error);
+        this.isLoadingResults = false;
+      });
+    }
 
-interface ICupTitleDto {
-  CupYear: number;
-  Location: string;
 
 }
