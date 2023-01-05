@@ -14,6 +14,16 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerConfiguration();
 
+builder.Services.AddCors(opt =>
+{
+    opt.AddDefaultPolicy(builder =>
+    {
+        builder
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowAnyOrigin();
+    });
+});
 
 var app = builder.Build();
 
@@ -33,6 +43,8 @@ app.UseRouting();
 
 app.MapControllers();
 
-app.MapFallbackToFile("index.html"); ;
+app.MapFallbackToFile("index.html");
+
+app.UseCors();
 
 app.Run();

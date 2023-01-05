@@ -10,9 +10,9 @@ namespace WorldCup.Infra.Data.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.Sql("UPDATE CupTitles SET ChampionFootballClubId = 9" + "WHERE Id = 3");
-            migrationBuilder.Sql("UPDATE CupTitles SET ChampionFootballClubId = 8" + "WHERE Id = 2");
-            migrationBuilder.Sql("UPDATE CupTitles SET ChampionFootballClubId = 7" + "WHERE Id = 1");
+            //migrationBuilder.Sql("UPDATE CupTitles SET ChampionFootballClubId = 9" + "WHERE Id = 3");
+            //migrationBuilder.Sql("UPDATE CupTitles SET ChampionFootballClubId = 8" + "WHERE Id = 2");
+            //migrationBuilder.Sql("UPDATE CupTitles SET ChampionFootballClubId = 7" + "WHERE Id = 1");
         }
 
         /// <inheritdoc />

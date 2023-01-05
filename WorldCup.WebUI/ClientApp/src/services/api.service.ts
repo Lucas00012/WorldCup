@@ -6,7 +6,7 @@ import { CupTitle } from 'src/model/cupTitle';
 import { FootballClub } from 'src/model/footballClub';
 
 
-const apiCupTitleUrl = 'https://localhost:44390/api/CupsTitles'
+const apiCupTitleUrl = 'https://localhost:44386/api/CupsTitles'
 var httpOptions = { headers: new HttpHeaders({ "Content-Type": "application/json" }) };
 
 @Injectable({
